@@ -1,0 +1,94 @@
+@font-face {
+  font-family: SpaceMono;
+  src: url("/fonts/space_mono/SpaceMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: SpaceMono;
+  font-weight: bold;
+  src: url("/fonts/space_mono/SpaceMono-Bold.ttf");
+}
+
+@font-face {
+  font-family: SpaceMono;
+  font-style: italic;
+  src: url("/fonts/space_mono/SpaceMono-Italic.ttf");
+}
+
+@font-face {
+  font-family: SpaceMono;
+  font-style: italic;
+  font-weight: bold;
+  src: url("/fonts/space_mono/SpaceMono-BoldItalic.ttf");
+}
+
+:root {
+  --box-border-color: #8F00FF;
+  --box-background-color: #22003D;
+  --box-hover-color: #44007c;
+  --box-active-color: #1d0033;
+  /* --box-button-hover-border-color: #8d32d3;
+  --box-button-hover-color: #3e0070;
+  --box-border-color-warning: #ffee00;
+  --box-background-color-warning: #3d3700; */
+  --box-padding: 12px;
+  --box-radius: 8px;
+
+  --text-color: #fff;
+
+  --default-margin: 6px;
+
+  --content-height: 85vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: SpaceMono, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  scrollbar-color: var(--box-border-color) var(--box-hover-color);
+}
+
+html, body {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#350047 5%, #1A1A1A);
+}
+
+.button,
+.box,
+input,
+button, 
+select {
+  padding: var(--box-padding);
+  background-color: var(--box-background-color);
+  border: 1px solid var(--box-border-color);
+  border-radius: var(--box-radius);
+  color: var(--text-color);
+}
+
+.button,
+button {
+  cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+  background-color: var(--box-hover-color);
+}
+.button:active,
+button:active {
+  background-color: var(--box-active-color);
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  color: var(--text-color);
+}

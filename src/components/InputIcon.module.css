@@ -1,0 +1,17 @@
+.textIconInput {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+.textIconInput input{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: 0;
+    width: 100%;
+}
+.icon {
+    border: solid 1px var(--box-border-color);
+    border-top-left-radius: var(--box-radius);
+    border-bottom-left-radius: var(--box-radius);
+    padding: var(--box-padding);
+}

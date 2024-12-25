@@ -1,0 +1,8 @@
+@import url("./Item.module.css");
+
+.experienceItem {
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: var(--default-margin);
+}

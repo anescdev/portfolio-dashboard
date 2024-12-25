@@ -1,0 +1,8 @@
+.iconLink {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--default-margin);
+    width: fit-content;
+}

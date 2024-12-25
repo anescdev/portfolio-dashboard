@@ -1,0 +1,41 @@
+{
+    "titles": {
+        "header": "Portfolio",
+        "general": "General",
+        "login": "Inicio de sesión",
+        "experience": "Experiencias" ,
+        "experience.create": "Añadir experiencia",
+        "company": "Empresas",
+        "company.create": "Añadir empresa",
+        "technology": "Tecnologías",
+        "technology.create": "Añadir tecnología"
+    },
+    "nav": {
+        "general": "General",
+        "experience": "Experiencias",
+        "technology": "Tecnologías",
+        "company": "Empresas"
+    },
+    "buttons": {
+        "login": "Iniciar sesión",
+        "company.create": "Añadir empresa",
+        "experience.create": "Añadir experiencia",
+        "experience.working.create": "Añadir experiencia laboral",
+        "experience.personal.create": "Añadir experiencia personal",
+        "technology.create": "Añadir tecnología"
+    },
+    "labels": {
+        "company.name": "Nombre de la compañía",
+        "technology.name": "Nombre de la tecnología",
+        "experience.filter.personal": "Personal",
+        "experience.filter.working": "Laboral",
+        "experience.name": "Nombre de la experiencia",
+        "experience.description": "Descripción de la experiencia",
+        "experience.personal.link": "Enlace al proyecto"
+    },
+    "auth": {
+        "started": "Sesión iniciada",
+        "user": "Usuario",
+        "password": "Contraseña"
+    }
+}

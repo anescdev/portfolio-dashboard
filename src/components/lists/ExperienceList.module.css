@@ -1,0 +1,11 @@
+
+.experienceList {
+    display: flex;
+    gap: var(--default-margin);
+    flex-flow: column nowrap;
+    align-items: stretch;
+    width: 100%;
+    margin-top: var(--default-margin);
+    overflow: hidden auto;
+    max-height: 75vh;
+}

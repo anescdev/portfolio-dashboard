@@ -1,0 +1,27 @@
+nav {
+    position: relative;
+}
+nav > p,
+nav ul li {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+}
+nav ul li {
+    list-style: none;
+    margin-block: var(--default-margin);
+}
+nav ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 98%;
+}
+
+ul.unfolded {
+    display: block;
+    border-top: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}

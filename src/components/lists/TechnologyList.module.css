@@ -1,0 +1,10 @@
+.technologyList {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto);    ;
+    justify-content: center;
+    gap: var(--default-margin);
+    overflow: auto;
+    height: var(--content-height);
+    padding-inline: var(--box-padding);
+}

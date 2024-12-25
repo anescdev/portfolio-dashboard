@@ -1,0 +1,20 @@
+.textIconSelect {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+.textIconSelect select{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: 0;
+    padding: calc(var(--box-padding) - 2px);;
+    width: 100%;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    border: solid 1px var(--box-border-color);
+    border-top-left-radius: var(--box-radius);
+    border-bottom-left-radius: var(--box-radius);
+    padding: var(--box-padding);
+}
