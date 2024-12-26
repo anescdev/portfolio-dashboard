@@ -39,7 +39,7 @@ export default function CreatePersonalExperienceForm() {
     return (
         <form action={formAction} className={`box ${styles.form}`}>
             <InputIcon type="text" name="name" id="name" placeholder={translate("labels/experience.name")} icon="tag" required />
-            <InputIcon type="text" name="description" id="description" placeholder={translate("labels/experience.description")} icon="newspaper" required />
+            <InputIcon type="textarea" name="description" id="description" placeholder={translate("labels/experience.description")} icon="newspaper" required />
             {
                 technologies === undefined ?
                     <p>Loading technologies...</p> :

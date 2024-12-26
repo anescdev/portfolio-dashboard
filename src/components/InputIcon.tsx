@@ -10,6 +10,7 @@ export default function InputIcon(
         placeholder,
         icon, 
         required,
+        cols = 30,
         type = "text"
     }: {
         name?: string,
@@ -17,13 +18,18 @@ export default function InputIcon(
         placeholder?: string
         icon: IconProp
         required?: boolean
-        type?: HTMLInputTypeAttribute
+        cols?: number
+        type?: HTMLInputTypeAttribute | "textarea"
     }
 ) {
     return (
         <span className={`${styles.textIconInput}`}>
             <span className={styles.icon}><FontAwesomeIcon icon={icon} fixedWidth/></span>
-            <input type={type} id={id} name={name} placeholder={placeholder} required={required}/>
+            {
+                type === "textarea" ?
+                 <textarea id={id} name={name} placeholder={placeholder} required={required} cols={cols}></textarea>:
+                <input type={type} id={id} name={name} placeholder={placeholder} required={required}/> 
+            }
         </span>
     )
 }

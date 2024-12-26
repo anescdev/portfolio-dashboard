@@ -3,7 +3,12 @@
     display: flex;
     align-items: stretch;
 }
-.textIconInput input{
+.textIconInput textarea {
+    resize: vertical;
+    min-height: fit-content;
+}
+.textIconInput input,
+.textIconInput textarea{
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-left: 0;

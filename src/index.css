@@ -58,7 +58,8 @@ html, body {
 .button,
 .box,
 input,
-button, 
+button,
+textarea,
 select {
   padding: var(--box-padding);
   background-color: var(--box-background-color);
