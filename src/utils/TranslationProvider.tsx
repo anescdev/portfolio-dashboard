@@ -20,13 +20,13 @@ export default function TranslationProvider(
             let translations;
             try {
                 translations = await translationsRequest.json();
-                setTranslations(mapTranslationJson(translations));
+                setTranslations(mapTranslationJson(translations as never));
                 // eslint-disable-next-line @typescript-eslint/no-unused-vars
             } catch (error) {
                 const retryTranslationRequest = await fetch(`/locales/${language.substring(0, language.indexOf("-"))}.json`);
                 try {
                     translations = await retryTranslationRequest.json();
-                    setTranslations(mapTranslationJson(translations));
+                    setTranslations(mapTranslationJson(translations as never));
                     // eslint-disable-next-line @typescript-eslint/no-unused-vars
                 } catch (error) {
                     setTranslations(null);

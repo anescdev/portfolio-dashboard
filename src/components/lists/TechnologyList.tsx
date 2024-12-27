@@ -6,7 +6,7 @@ import styles from "./TechnologyList.module.css";
 
 export default function TechnologyList() {
     const [technologies, setTechnologies] = useState<Technology[]>([]);
-    const [actualPage, setActualPage] = useState(1);
+    const [actualPage] = useState(1);
     const onDelete = (id: number) => () => {
         setTechnologies(techs => techs.filter(tech => tech.id !== id));
     }

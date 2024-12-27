@@ -1,45 +1,5 @@
-export type TranslationContextKeys = {
-    "titles": {
-        "header": string,
-        "general": string,
-        "login": string,
-        "experience": string,
-        "experience.create": string,
-        "company": string,
-        "company.create": string,
-        "technology": string,
-        "technology.create": string
-    },
-    "nav": {
-        "general": string,
-        "experience": string,
-        "technology": string,
-        "company": string
-    },
-    "buttons": {
-        "login": string,
-        "company.create": string,
-        "experience.create": string,
-        "experience.working.create": string,
-        "experience.personal.create": string,
-        "technology.create": string
-    },
-    "labels": {
-        "company.name": string,
-        "technology.name": string,
-        "experience.filter.personal": string,
-        "experience.filter.working": string,
-        "experience.name": string,
-        "experience.description": string,
-        "experience.personal.link": string
-    },
-    "auth": {
-        "started": string,
-        "user": string,
-        "password": string
-    }
-}
-export function mapTranslationJson(json: any): TranslationContextKeys {
+export type TranslationContextKeys = Record<string, Record<string, string>>;
+export function mapTranslationJson(json: never):TranslationContextKeys {
     return {
         titles: {
             header: json["titles"]["header"],

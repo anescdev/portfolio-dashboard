@@ -4,6 +4,9 @@ import { CreateCompanyDto } from "@context/company/models/dto/CreateCompanyDto";
 import { HttpClient } from "@context/shared/client/http.client";
 
 export class CompanyHttpDatasource implements CompanyRepository {
+    //@ts-expect-error Page parameter must to be User
+    // TODO: Fix API for accept these parameters
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     async find(page: number, pageSize: number): Promise<Company[]> {
         const findCompaniesRequest = await HttpClient.instance().request("/api/company", {
             method: "GET"
