@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       }
     ]
   }
-]);
+], {basename: import.meta.env.VITE_BASE_PATHNAME});
 library.add(faTrash, faBars, faBuilding, faBriefcase, faMicrochip, faUser, faTable, faKey, faAdd, faTag, faImage, faNewspaper, faLink, faCalendar, faCircleNotch);
 
 createRoot(document.getElementById('root')!).render(
