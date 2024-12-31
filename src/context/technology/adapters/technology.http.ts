@@ -26,7 +26,7 @@ export class TechnologyHttpDatasource implements TechnologyRepository {
         const formData = new FormData();
         formData.set("techName", technologyFormData.techName);
         formData.set("techLogo", technologyFormData.techLogo);
-        const createTechRequest = await this.#client.request("/api/technology", {
+        const createTechRequest = await this.#client.request("/technology", {
             method: "POST",
             body: formData,
             credentials: "include"
@@ -43,7 +43,7 @@ export class TechnologyHttpDatasource implements TechnologyRepository {
     async delete(technologyId: Technology["id"]): Promise<void> {
         const formData = new FormData();
         formData.set("techId", `${technologyId}`);
-        const deleteTechnologyRequest = await HttpClient.instance().request("/api/technology", {
+        const deleteTechnologyRequest = await HttpClient.instance().request("/technology", {
             method: "DELETE",
             credentials: "include",
             body: formData

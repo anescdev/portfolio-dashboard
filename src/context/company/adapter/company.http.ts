@@ -8,7 +8,7 @@ export class CompanyHttpDatasource implements CompanyRepository {
     // TODO: Fix API for accept these parameters
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     async find(page: number, pageSize: number): Promise<Company[]> {
-        const findCompaniesRequest = await HttpClient.instance().request("/api/company", {
+        const findCompaniesRequest = await HttpClient.instance().request("/company", {
             method: "GET"
         });
         if (!findCompaniesRequest.ok) return [];
@@ -24,7 +24,7 @@ export class CompanyHttpDatasource implements CompanyRepository {
     async create(itemCreateDto: CreateCompanyDto): Promise<Company> {
         const formData = new FormData();
         formData.set("name", itemCreateDto.name);
-        const createCompanyRequest = await HttpClient.instance().request("/api/company", {
+        const createCompanyRequest = await HttpClient.instance().request("/company", {
             method: "POST",
             body: formData,
             credentials: "include"
@@ -39,7 +39,7 @@ export class CompanyHttpDatasource implements CompanyRepository {
     async delete(itemId: number): Promise<void> {
         const formData = new FormData();
         formData.set("companyId", `${itemId}`);
-        const deleteCompanyRequest = await HttpClient.instance().request("/api/company", {
+        const deleteCompanyRequest = await HttpClient.instance().request("/company", {
             method: "DELETE",
             body: formData,
             credentials: "include"

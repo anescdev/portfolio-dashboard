@@ -22,7 +22,7 @@ export class HttpClient {
         const formData = new FormData();
         formData.append("username", user);
         formData.append("password", password);
-        const loginRequest = await this.request("/api/authentication/login", {
+        const loginRequest = await this.request("/authentication/login", {
             method: "POST",
             body: formData,
             credentials: "include"

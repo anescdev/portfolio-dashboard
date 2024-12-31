@@ -21,7 +21,7 @@ export class WorkingExperienceHttpDatasource implements WorkingExperienceReposit
         formData.set("experienceCompany", `${itemCreateDTO.company}`);
         formData.set("experienceStartDate", dateFormat(itemCreateDTO.startDate));
         if(itemCreateDTO.finishDate !== undefined) formData.set("experienceEndDate", dateFormat(itemCreateDTO.finishDate));
-        const createWorkingExperienceRequest = await HttpClient.instance().request("/api/experience/workingExperience",
+        const createWorkingExperienceRequest = await HttpClient.instance().request("/experience/workingExperience",
             {
                 method: "POST",
                 body: formData,
@@ -35,7 +35,7 @@ export class WorkingExperienceHttpDatasource implements WorkingExperienceReposit
     async delete(itemId: number): Promise<void> {
         const formData = new FormData();
         formData.set("experienceId", `${itemId}`);
-        const deleteExperienceRequest = await HttpClient.instance().request("/api/experience/workingExperience", {
+        const deleteExperienceRequest = await HttpClient.instance().request("/experience/workingExperience", {
             method: "DELETE", 
             body: formData,
             credentials: "include"

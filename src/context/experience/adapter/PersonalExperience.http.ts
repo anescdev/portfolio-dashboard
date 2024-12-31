@@ -18,7 +18,7 @@ export class PersonalExperienceHttpDatasource implements PersonalExperienceRepos
         formData.set("experienceDescription", itemCreateDTO.description);
         formData.set("experienceTechs", itemCreateDTO.technologies.join(","));
         formData.set("experienceLink", itemCreateDTO.projectLink.toString());
-        const createPersonalExperienceRequest = await HttpClient.instance().request("/api/experience/personalExperience",
+        const createPersonalExperienceRequest = await HttpClient.instance().request("/experience/personalExperience",
             {
                 method: "POST",
                 body: formData,
@@ -33,7 +33,7 @@ export class PersonalExperienceHttpDatasource implements PersonalExperienceRepos
     async delete(itemId: number): Promise<void> {
         const formData = new FormData();
         formData.set("experienceId", `${itemId}`);
-        const deleteExperienceRequest = await HttpClient.instance().request("/api/experience/personalExperience", {
+        const deleteExperienceRequest = await HttpClient.instance().request("/experience/personalExperience", {
             method: "DELETE",
             body: formData,
             credentials: "include"
