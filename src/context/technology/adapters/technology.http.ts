@@ -7,7 +7,7 @@ import { TechnologyRepository } from "@context/technology/models/technology.repo
 export class TechnologyHttpDatasource implements TechnologyRepository {
     #client = HttpClient.instance();
     async find(page: number, pageSize: number): Promise<Technology[]> {
-        const findTechRequest = await this.#client.request(`/api/technology?page=${page}&pageSize=${pageSize}`);
+        const findTechRequest = await this.#client.request(`/technology?page=${page}&pageSize=${pageSize}`);
         if (findTechRequest.status !== 200) {
             throw new ServerErrorException();
         }

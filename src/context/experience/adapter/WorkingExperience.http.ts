@@ -7,7 +7,7 @@ import { mapWorkingExperienceFromApi } from "./utils/experience.mapper";
 
 export class WorkingExperienceHttpDatasource implements WorkingExperienceRepository {
     async find(page: number, pageSize: number): Promise<WorkingExperience[]> {
-        const findWorkingExperience = await HttpClient.instance().request(`/api/experience?experienceType=working&page=${page}&pageSize=${pageSize}`);
+        const findWorkingExperience = await HttpClient.instance().request(`/experience?experienceType=working&page=${page}&pageSize=${pageSize}`);
         if(!findWorkingExperience.ok) return [];
         const findWorkingExperienceBody = await findWorkingExperience.json();
         if(!Array.isArray(findWorkingExperienceBody)) return [];

@@ -6,7 +6,7 @@ import { mapPersonalExperienceFromApi } from "./utils/experience.mapper";
 
 export class PersonalExperienceHttpDatasource implements PersonalExperienceRepository {
     async find(page: number, pageSize: number): Promise<PersonalExperience[]> {
-        const findPersonalExperience = await HttpClient.instance().request(`/api/experience?experienceType=personal&page=${page}&pageSize=${pageSize}`);
+        const findPersonalExperience = await HttpClient.instance().request(`/experience?experienceType=personal&page=${page}&pageSize=${pageSize}`);
         if (!findPersonalExperience.ok) return [];
         const findPersonalExperienceBody = await findPersonalExperience.json();
         if (!Array.isArray(findPersonalExperienceBody)) return [];
