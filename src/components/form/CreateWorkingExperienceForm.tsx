@@ -23,8 +23,6 @@ export default function CreateWorkingExperienceForm() {
         findCompany(1, 25).then(setCompanies);
     }, []);
     const formAction = (formData: FormData) => {
-        console.log(typeof formData.get("finish-date"));
-
         const createWorkingExperienceData: CreateWorkingExperienceDTO = {
             name: formData.get("name") as string,
             description: formData.get("description") as string,

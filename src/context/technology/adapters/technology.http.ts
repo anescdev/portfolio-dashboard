@@ -31,7 +31,6 @@ export class TechnologyHttpDatasource implements TechnologyRepository {
             body: formData,
             credentials: "include"
         });
-        console.log(createTechRequest);
         if (!createTechRequest.ok) throw new Error("No se pudo añadir la tecnología");
         const createTechBody = await createTechRequest.json();
         return {
