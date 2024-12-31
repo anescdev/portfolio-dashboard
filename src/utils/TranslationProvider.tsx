@@ -16,8 +16,6 @@ export default function TranslationProvider(
     useEffect(() => {
         (async () => {
             const language = window.navigator.language;
-            console.log(import.meta.env.BASE_URL);
-            
             const translationsRequest = await fetch(`${import.meta.env.BASE_URL}locales/${language}.json`);
             let translations;
             try {
