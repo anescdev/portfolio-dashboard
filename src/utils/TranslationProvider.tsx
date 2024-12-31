@@ -16,14 +16,14 @@ export default function TranslationProvider(
     useEffect(() => {
         (async () => {
             const language = window.navigator.language;
-            const translationsRequest = await fetch(`/locales/${language}.json`);
+            const translationsRequest = await fetch(`${import.meta.env.BASE_URL ?? ""}/locales/${language}.json`);
             let translations;
             try {
                 translations = await translationsRequest.json();
                 setTranslations(mapTranslationJson(translations as never));
                 // eslint-disable-next-line @typescript-eslint/no-unused-vars
             } catch (error) {
-                const retryTranslationRequest = await fetch(`/locales/${language.substring(0, language.indexOf("-"))}.json`);
+                const retryTranslationRequest = await fetch(`${import.meta.env.BASE_URL ?? ""}/locales/${language.substring(0, language.indexOf("-"))}.json`);
                 try {
                     translations = await retryTranslationRequest.json();
                     setTranslations(mapTranslationJson(translations as never));
