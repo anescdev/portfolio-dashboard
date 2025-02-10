@@ -1,5 +1,5 @@
 # Portfolio Dashboard
-Panel de administración que permite administrar el (portfolio)[https://www.anescdev.es] de forma sencilla.
+Panel de administración que permite administrar el [portfolio](https://www.anescdev.es) de forma sencilla.
 
 Esta versión del portfolio se puede considerar en beta ya que faltan detalles por pulir pero entre las funciones que incorpora está:
 * Manejar las empresas en la que he trabajado
